@@ -1,0 +1,151 @@
+/*-----CONTROL 2----------
+-------Cristian Maira-----*/
+
+//Supuse que como lo hicieron en clases, y aparte es de TDA, no es necesario que compile
+//por lo tanto solo mando el .txt como si fuera hoja de papel.
+
+
+//--------Pregunta 1-------
+
+class conjuntoTDA
+{
+	private:
+		
+		//Esto es para el metodo "bool pertenece()", ya que no pertenece al TDA "SetTDA", y hay que iterar de alguna manera.
+		Nodo *head;
+		Nodo *tail;
+
+	public:
+
+		//Metodos Pedidos
+		
+		void agrega(int x)
+		{
+			if(pertenece(x) == true)
+			{
+				return;
+			}
+			else
+			{
+				SetTDA.insert(x);
+			}
+		}	
+
+		int saca()
+		{
+			SetTDA.delete();	
+		}
+
+		bool estaVacio()
+		{
+			SetTDA.isEmpty();
+		}
+
+		bool pertenece(int x)
+		{
+			Nodo *aux = head;
+			while(aux->next != NULL)
+			{
+				if(aux->data == x)
+				{
+					return true;
+				}
+				aux = aux->next;
+			}
+			return false;
+		}
+
+		conjuntoTDA interseccion(conjuntoTDA c)
+		{
+
+		}
+
+		// BONUS void intersecta(conjuntoTDA c)
+		{
+
+		}
+
+		conjuntoTDA union(conjuntoTDA c)
+		{
+			conjuntoTDA unido = new conjuntoTDA();
+			Nodo *aux = c->head;
+			while(aux->next != NULL)
+			{
+				unido.agregar(aux->data);
+				aux = aux->next;
+			}
+			return unido;
+
+			//La union de ambos conjuntos seria unir el link del ultimo elemento de "unido" 
+			//con el primer elemento del conjunto "c", pero como el metodo "agregar" no permite que se repitan
+			//los elementos, la union seria los de "unido" mas los elementos de "c" que no estan en el otro.
+		}
+
+		//BONUS void une(conjuntoTDA c)
+		{
+			//mas o menos lo mismo que el metodo anterior.
+			
+			Nodo *aux = c->head;
+			while(aux != NULL)
+			{
+				agregar(aux->data)
+				aux = aux->next;
+			}
+			return;
+
+		}
+};
+
+//---------------------------------------
+//--------Pregunta 2---------------------
+
+
+class lista
+{
+	//Como la clase "item" no tiene referencias a si mismo, trabajaremos con arreglos.
+
+	public:
+
+		Item i[?];
+
+		lista()
+		{
+			for(int k = 0; k < ?; k++)
+			{
+				i[k] = NULL;
+			}
+		}
+
+		//el problema del arreglo es que tiene el espacio limitado.
+		//una solucion a esto seria utilizar vectores, pero no es materia del curso,
+		//y tampoco se como declararlo, solo se que es un arreglo con tamaño indefinido/modificable.
+
+	//Metodos Pedidos
+
+	void agregar(Item i)
+	{
+		int contador = 0;
+		while(contador < ?)
+		{
+			if (i[contador] != NULL)
+			{
+				contador ++;
+			}
+			if(i[contador] == NULL)
+			{
+				i[contador] = i;
+				return;			
+			}
+		}
+	}
+
+	int probabilidad(string valor)
+	{
+
+	}
+	
+	string llamar_kesimo(int k)
+	{
+
+	}
+};
